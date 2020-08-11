@@ -1,8 +1,8 @@
 import React from "react"
 
-const userInput=()=>{
+const userInput=(props)=>{
 
-    return <input type="text" />
+    return <input type="text" onChange={props.change}  />
 }
 
 export default userInput
