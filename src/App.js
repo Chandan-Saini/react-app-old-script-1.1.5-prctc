@@ -9,9 +9,9 @@ class App extends Component {
       <div className="App">
         
         <UserInput />
-        <UserOutput  />
-        <UserOutput />
-        <UserOutput />
+        <UserOutput userName={"chandan"} />
+        <UserOutput userName={"aman"} />
+        <UserOutput userName={"akku"} />
       </div>
     );
   }

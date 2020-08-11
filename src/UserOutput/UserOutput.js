@@ -4,8 +4,8 @@ const userOutput=(props)=>{
 
     return (
     <div>
-        <p>this  is p one</p>
-        <p>this is p two</p>
+        <p>this is {props.userName} </p>
+        <p>i am 20 years old</p>
     </div>
     )
 }
