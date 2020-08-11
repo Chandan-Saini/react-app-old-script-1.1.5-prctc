@@ -8,13 +8,19 @@ class App extends Component {
   state={
     userName:" Chandan from state"
   }
+
+  stateHandler=()=>{
+    this.setState({
+      userName:"Chandan from handler"
+    })
+  }
   render() {
 
     return (
       <div className="App">
         
         <UserInput />
-        <UserOutput userName={this.state.userName} />
+        <UserOutput click={this.stateHandler} userName={this.state.userName} />
         <UserOutput userName={this.state.userName} />
         <UserOutput userName={"akku"} />
       </div>
