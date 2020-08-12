@@ -4,18 +4,16 @@ import ValidationComponent from './ValidationComponent/ValidationComponent'
 
 class App extends Component {
  
-  state=({
-    str:"chandan"
-  })
- 
-  getComponent=()=>{
-    
+  state={
+    strng:""
   }
+ 
+
   render() {
 
     
     return (
-      <ValidationComponent change={()=>this.getComponent} />
+      <input onChange={this.state.strng} value={this.state.strng} />
     );
   }
 }
