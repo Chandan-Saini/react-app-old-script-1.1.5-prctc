@@ -1,14 +1,8 @@
 import React from "react"
 
-const userInput=(props)=>{
-    const style={
-        border:"2px solid red",
-        width:"200px",
-        margin:"20px auto"
-
-    }
-
-    return <input style={style} type="text" onChange={props.change} value={props.curName} />
+const validationComponent=(props)=>{
+    const textLength= props.length
+    return <input onChange={event.target.value}/>
 }
 
-export default userInput
+export default validationComponent
