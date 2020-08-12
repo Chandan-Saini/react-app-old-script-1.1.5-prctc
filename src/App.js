@@ -18,9 +18,9 @@ class App extends Component {
     
     return (
       <div>
-        <input type="text" strLen={this.state.strng.length} onChange={this.strngChangeHandler} value={this.state.strng} />
+        <input type="text"  onChange={this.strngChangeHandler} value={this.state.strng} />
         <p>{this.state.strng}</p>
-         <ValidationComponent />
+        <ValidationComponent strlen={this.state.strng.length} />
       </div>
     );
   }
