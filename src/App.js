@@ -8,12 +8,20 @@ class App extends Component {
     strng:""
   }
  
-
+ strngChangeHandler=(event)=>{
+   this.setState({
+     strng:event.target.value
+   })
+ }
   render() {
 
     
     return (
-      <input type="text" strLen={this.state.strng.length} onChange={this.state.strng} value={this.state.strng} />
+      <div>
+        <input type="text" strLen={this.state.strng.length} onChange={this.strngChangeHandler} value={this.state.strng} />
+        <p>{this.state.strng}</p>
+         <ValidationComponent />
+      </div>
     );
   }
 }
