@@ -13,7 +13,7 @@ class App extends Component {
 
     
     return (
-      <input onChange={this.state.strng} value={this.state.strng} />
+      <input type="text" strLen={this.state.strng.length} onChange={this.state.strng} value={this.state.strng} />
     );
   }
 }
