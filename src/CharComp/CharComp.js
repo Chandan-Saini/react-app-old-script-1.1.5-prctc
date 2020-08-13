@@ -1,7 +1,7 @@
 import React from "react"
 
 const charComp=(props)=>{
-   style={
+  const style={
        display:"inline-block",
        border:"2px solid black",
        width:"40px",
@@ -10,7 +10,7 @@ const charComp=(props)=>{
        padding:"5px"
    }
 
-    return <p style={style}>{props.strng} </p>
+    return <p style={style}>{props.str} </p>
 }
 
 export default charComp
