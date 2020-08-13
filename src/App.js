@@ -13,15 +13,22 @@ class App extends Component {
      strng:event.target.value
    })
  }
-  render() {
 
+ charHandler=()=>{
+  
+   
+ }
+  render() {
+    const chList = this.state.strng.split('').map((ch,index) => {
+      return <CharComp chr={ch} key={index}/>
+    })
     
     return (
       <div>
         <input type="text"  onChange={this.strngChangeHandler} value={this.state.strng} />
         <p>{this.state.strng}</p>
         <ValidationComponent strlen={this.state.strng.length} />
-        <CharComp str={this.state.strng} />
+        {chList}
       </div>
     );
   }

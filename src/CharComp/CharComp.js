@@ -10,7 +10,7 @@ const charComp=(props)=>{
        padding:"5px"
    }
 
-    return <p style={style}>{props.str} </p>
+    return <p style={style}>{props.chr} </p>
 }
 
 export default charComp
