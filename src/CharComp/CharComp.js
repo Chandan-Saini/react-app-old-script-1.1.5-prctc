@@ -10,7 +10,7 @@ const charComp=(props)=>{
        padding:"5px"
    }
 
-    return <p style={style}>{props.chr} </p>
+    return <p onClick={props.del} style={style}>{props.chr} </p>
 }
 
 export default charComp
