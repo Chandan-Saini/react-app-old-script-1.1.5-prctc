@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import "./App.css";
 import ValidationComponent from './ValidationComponent/ValidationComponent'
 import CharComp from './CharComp/CharComp'
+
+//Till here we have practiced assignments given by tutor,
+// now we will change this source file with Unit-9 source file so that we can work with https/ajax and prcatice them,
+//we are using diff app now, till unit-7 we used diff app
 class App extends Component {
  
   state={
