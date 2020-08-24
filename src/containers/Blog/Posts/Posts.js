@@ -27,6 +27,7 @@ class Posts extends Component {
       });
   }
   render() {
+    console.log(this.props); //also contains props provided by router
     let posts = (
       <p style={{ textAlign: "center", background: "yellow" }}>
         Something went wrong
