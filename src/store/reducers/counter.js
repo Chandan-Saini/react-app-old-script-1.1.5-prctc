@@ -7,12 +7,12 @@ const initialState = {
 const reducer = ( state = initialState, action ) => {
     switch ( action.type ) {
         case actionTypes.INCREMENT:
-            const newState = Object.assign({}, state);
+            const newState = Object.assign({}, state); //way 1 to shallow copy obj
             newState.counter = state.counter + 1;
             return newState;
         case actionTypes.DECREMENT:
             return {
-                ...state,
+                ...state,                             //way 2 to shallow copy obj
                 counter: state.counter - 1
             }
         case actionTypes.ADD:
