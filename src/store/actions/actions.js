@@ -10,3 +10,45 @@ export const increment=()=>{
         type:"INCREMENT"
     }
 }
+
+export const decrement = () => {
+    return {
+        type: DECREMENT
+    };
+};
+
+export const add = (value) => {
+    return {
+        type: ADD,
+        val: value
+    };
+};
+
+export const subtract = (value) => {
+    return {
+        type: SUBTRACT,
+        val: value
+    };
+};
+
+export const saveResult = (res) => {
+    return {
+        type: STORE_RESULT,
+        result: res
+    };
+}
+
+export const storeResult = (res) => {
+    return dispatch => {
+        setTimeout(() => {
+            dispatch(saveResult(res));
+        }, 2000);
+    }
+};
+
+export const deleteResult = (resElId) => {
+    return {
+        type: DELETE_RESULT,
+        resultElId: resElId
+    };
+};
