@@ -5,6 +5,15 @@ const initialState = {
     results: []
 };
 
+const deleteResult=(state,action)=>{
+     const updatedArray = state.results.filter(
+       (result) => result.id !== action.resultElId
+     );
+     return updateObject({
+       state,
+       results: updatedArray,
+     });
+}
 const reducer = ( state = initialState, action ) => {
     switch ( action.type ) {
         case actionTypes.STORE_RESULT:
@@ -16,14 +25,7 @@ const reducer = ( state = initialState, action ) => {
               })
             });
         case actionTypes.DELETE_RESULT:
-            // const id = 2;
-            // const newArray = [...state.results];       //way 2 to shallow copy arrays
-            // newArray.splice(id, 1)                    //way to delete the element from array
-            const updatedArray = state.results.filter(result => result.id !== action.resultElId); //way to delete element from array without effecting original array, as filter returns new array when condition satisfies 
-            return updateObject({
-              state,
-              results: updatedArray,
-            });
+           return deleteResult(state,action)
     }
     return state;
 };
